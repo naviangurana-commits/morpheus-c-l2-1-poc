@@ -1,0 +1,14 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+cache_path = "cache"
+solc_version = "0.8.20"
+evm_version = "cancun"
+optimizer = false
+
+# Morpheus bounty PoC - C-L2-1 (DepositPool claimReferrerTierFor receiver bypass).
+# Fork is pinned in-code: test/Lane2.t.sol setUp() calls
+# vm.createSelectFork("https://eth.drpc.org", 26480107)
+# (Ethereum mainnet block 26,480,107). One command from the repo root:
+#   forge test
